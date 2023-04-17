@@ -1,0 +1,21 @@
+.pot {
+  animation: pot ease 6s 5s infinite;
+}
+
+@keyframes pot {
+  0% {
+    transform: rotate(0);
+  }
+
+  5%, 15% {
+    transform: rotate(-20deg);
+  }
+
+  10%, 20% {
+    transform: rotate(20deg);
+  }
+
+  25% {
+    transform: rotate(0);
+  }
+}
