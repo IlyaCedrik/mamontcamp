@@ -1,8 +1,10 @@
 import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, { Autoplay, Pagination } from 'swiper';
+
 import "swiper/css";
 import "swiper/css/pagination";
+import "swiper/css/autoplay";
 
-import { Pagination } from "swiper";
 import styles from "./Benefits.module.css";
 
 function Benefits() {
@@ -12,6 +14,8 @@ function Benefits() {
       return `<span class="${className} bg-white"></span>`;
     },
   };
+  SwiperCore.use([Autoplay])
+
 
   return (
     <section id='benefits' className='pt-[55px] md:pt-[81px] xl:relative xl:pt-0 pb-[68px] md:pb-[32px] xl:pb-0 bg-black text-white xl:h-[730px]'>
@@ -24,6 +28,7 @@ function Benefits() {
 
       <div className="md:hidden xl:block mb-[37px]">
         <Swiper
+          autoplay={{ delay: 1500, pauseOnMouseEnter: false}}
           pagination={pagination}
           modules={[Pagination]}
           className="mySwiper"
@@ -46,19 +51,20 @@ function Benefits() {
               <span className="block text-[#A19165]">приключения</span>
               начинаются
             </h2>
-            <p className="text-[12px] md:text-[14px] xl:leading-[21px]">Увлекательные путешествия начинается с истории. Более 20 лет назад 12 полярников, совершив аварийную посадку в Антарктиде, всерьез задумались о поиске мамонтов в Сибири, и спустя год в Якутии был обнаружен юкагирский мамонт. Это вдохновило путешественников на создание уникального чистого продукта — водки MAMONT, которая создается в одном из самых экологичных мест России — на Алтае. В 2018 году здесь обосновался лагерь MAMONT CAMP, куда может попасть каждый желающий открыть для себя новые  впечатления и, возможно, найти мамонтов...</p>
-            <p className="mt-[10px] text-[17px] md:text-[22px] uppercase font-extrabold text-secondary md:mb-[6px] xl:leading-[25px]">Откройте для себя мир горного Алтая, вдохновитесь энергией дикой природы, отправьтесь в путешествие вместе с MAMONT.</p>
+            <p className="text-[10px] md:text-[10px] xl:leading-[15px]">Увлекательные путешествия начинается с истории. Более 20 лет назад 12 полярников совершили аварийную посадку в Антарктиде. Ожидая помощь, они всерьез задумались о поиске мамонтов в Сибири, а спустя год в Якутии был обнаружен юкагирский мамонт. Это вдохновило путешественников на создание уникального русского продукта — водки MAMONT. Сегодня напитки бренда производятся на одном из старейших предприятий Сибири и, пожалуй, в чистейшем и экологичном месте России — в сердце Алтая. </p>
+            <p className="mt-[20px] text-[10px] md:text-[10px] xl:leading-[15px]">В 2018 году здесь обосновался лагерь MAMONT CAMP — купольный премиум-глэмпинг. Лагерь работает ежегодно с июня по сентябрь в формате экспедиции. В программе — пешие походы, катание на джипах и водометных катерах, русская баня, горячая купель на берегу реки, насыщенная гастрономическая программа и, конечно, эксклюзивная дегустация продуктов бренда MAMONT.</p>
+            <p className="mt-[27px] text-[12px] md:text-[14px] uppercase font-extrabold text-secondary md:mb-[6px] xl:leading-[16px]">Откройте для себя мир горного Алтая, вдохновитесь энергией дикой природы, отправьтесь в путешествие вместе с MAMONT.</p>
           </div>
 
 
 
           <div className="md:w-4/12 xl:w-full">
             <div className="xl:flex xl:items-center">
-              <figure className="md:hidden xl:block mt-[32px] xl:mt-[10px] xl:min-w-[190px] xl:max-w-[190px] xl:mr-[21px]">
+              <figure className="md:hidden xl:block mt-[32px] xl:mt-[42px] xl:min-w-[190px] xl:max-w-[190px] xl:mr-[21px]">
                 <img className="w-full" src="/benefits/map@2x.png" alt="Указатель местоположения" />
               </figure> 
               <div className="mt-[32px] xl:mt-0">
-                <p className="text-[45px] md:text-[25px] uppercase font-black text-[#A19165]">Где?</p>
+                <p className="text-[25px] uppercase font-black text-[#A19165]">Где?</p>
                 <p className="text-[16px] md:text-[13px]">Горный Алтай, Усть-Коксинский район, на берегу реки Кокса</p>
                 <div className="flex items-end mt-[16px] md:mt-[13px]">
                   <img className={`${styles['pot']} mr-[8px] md:w-[25px]`} src="/marker.svg" alt="Указатель местоположения" />
@@ -74,12 +80,18 @@ function Benefits() {
       </div>
 
       <div className="hidden md:block xl:hidden mt-[58px]">
-        <Swiper       
+        <Swiper
+          autoplay={{
+          delay: 2000,
+          pauseOnMouseEnter: true,
+          disableOnInteraction: false
+          }}
+          loop
           pagination={pagination}
           modules={[Pagination]}
           className="mySwiper"
         >
-          { Array(11).fill('').map((_, index)=>(
+          { Array(7).fill('').map((_, index)=>(
               (<SwiperSlide key={index}>
                 <img className="w-full" src={`/benefits/DJI_0125 ${++index}.png`} alt="Природа mamont camp" />
               </SwiperSlide>

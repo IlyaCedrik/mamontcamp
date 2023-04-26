@@ -1,5 +1,5 @@
 import { useState } from "react";
-import {Scrollchor} from "react-scrollchor";
+import { Scrollchor } from "react-scrollchor";
 
 function Menu() {
   let [showMenu, setShowMenu] = useState(false);
@@ -13,12 +13,12 @@ function Menu() {
           </figure>
 
           <Scrollchor to="#promo-code" className="hidden xl:block mt-[17px] ml-[28px] text-[17px]">Загрузить чек</Scrollchor>
-          <Scrollchor to="#promo-code" className="hidden xl:block mt-[17px] ml-[28px] text-[17px]">Условия акции</Scrollchor>
+          <a target="_blank" href="/rules.pdf" className="hidden xl:block mt-[17px] ml-[28px] text-[17px]">Условия акции</a>
 
           <figure className="hidden md:block mt-[36px] xl:mt-[25px] mr-[118px] ml-auto max-w-[75px] md:max-w-[120px]">
             <img src="/promo-banner/promo-banner-vodka@2x.png" alt="" />
           </figure>
-          <a className="hidden xl:block xl:mt-[17px] text-[17px]" href="/">Поддержка</a>
+          <a className="hidden xl:block xl:mt-[17px] text-[17px]" href="https://wa.me/79164026288">Поддержка</a>
           <div className="mt-[5vw] md:mt-[32px] cursor-pointer xl:hidden" onClick={()=>setShowMenu(!showMenu)}>
             <span className="block w-[40px] h-[6px] rounded-full bg-white"></span>
             <span className="block ml-auto mt-[6px] w-[25px] h-[6px] rounded-full bg-white"></span>
@@ -45,8 +45,8 @@ function Menu() {
                     <li className="mt-[13px] md:mt-[20px] text-[23px] md:text-[38px] font-bold"><Scrollchor to="#promo-code" onClick={()=>setShowMenu(!showMenu)}>Условия акции</Scrollchor></li>
                   </ul>
                   <ul className="mt-[40px]">
-                    <li className="text-[23px] md:text-[38px] font-bold"><a href="/">Поддержка</a></li>
-                    <li className="mt-[13px] md:mt-[20px] text-[15px] md:text-[24px]"><a href="/">Политика</a></li>
+                    <li className="text-[23px] md:text-[38px] font-bold"><a target="_blank" href="https://wa.me/79164026288">Поддержка</a></li>
+                    <li className="mt-[13px] md:mt-[20px] text-[15px] md:text-[24px]"><a target="_blank" href="/rules.pdf">Политика</a></li>
                   </ul>
                 </div>
                 <div className="mt-auto text-[17px] md:text-[27px] uppercase mx-auto mb-[40px]">

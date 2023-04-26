@@ -7,9 +7,9 @@ function Footer() {
         <div className="md:flex justify-between">
           <div className="mb-[15px] mt-[32px]">
             <ul className="flex justify-between">
-              <li className="text-[14px]">Условия акции</li>
-              <li className="text-[14px] md:ml-[38px]">Политика</li>
-              <li className="text-[14px] md:ml-[38px]">Поддержка</li>
+              <li className="text-[14px]"><a target="_blank" href="/rules.pdf">Условия акции</a></li>
+              <li className="text-[14px] md:ml-[38px]"><a target="_blank" href="/rules.pdf">Политика</a></li>
+              <li className="text-[14px] md:ml-[38px]"><a target="_blank" href="https://wa.me/79164026288">Поддержка</a> </li>
             </ul>
           </div>
           <div className="flex justify-between items-center">

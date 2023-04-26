@@ -25,7 +25,7 @@ function ModalAge() {
             </div>
             <p className="text-[2.6vw] xl:text-[22px]">
               Заходя на сайт, вы соглашаетесь<br/> c &nbsp;
-              <a href="/" className="underline text-[#A18A66]">политикой использования файлов cookie</a>
+              <a target="_blank" href="/rules.pdf" className="underline text-[#A18A66]">политикой использования файлов cookie</a>
             </p>
           </div>
         </div>

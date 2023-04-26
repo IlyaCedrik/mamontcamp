@@ -28,7 +28,8 @@ function PromoCode() {
       }, 10);
 
       try {
-        let res = await axios.post('http://localhost:3000/api/uploadfile', formData, {
+        let res = await axios.post('http://81.200.145.226:3000/api/uploadfile', formData, {
+        // let res = await axios.post('http://localhost:3000/api/uploadfile', formData, {
           'content-type': 'multipart/form-data',
         });
 
@@ -49,7 +50,7 @@ function PromoCode() {
       <div className='container md:max-w-[460px] xl:max-w-none'>
         <div className="xl:flex xl:items-end xl:justify-center xl:space-x-[74px]">
           <div className="xl:w-[444px]">
-            <h2 className="mb-[24px] xl:mb-[31px] text-[24px] md:text-[46px] uppercase font-bold">Как получить подарки?</h2>
+            <h2 className="mb-[24px] xl:mb-[31px] text-[24px] md:text-[46px] uppercase font-bold">Как получить приз?</h2>
             <div>
               <ul>
                 <li className="mb-[10px] pb-[10px] border-b-[1px] border-secondary">
@@ -58,21 +59,21 @@ function PromoCode() {
                 </li>
                 <li className="mb-[10px] pb-[10px] border-b-[1px] border-secondary">
                   <h3 className="text-[18px] md:text-[24px] text-secondary font-bold uppercase">Шаг 2: </h3>
-                  <p className="text-[14px] md:text-[18px]">Загрузите фотографию чека от покупки MAMONT.</p>
+                  <p className="text-[14px] md:text-[18px]">Загрузите фотографию чека от покупки <span className='uppercase'>Mamont</span>, <span className='uppercase'>Mamont Blood</span> или <span className='uppercase'>Mamont Ivory</span>.</p>
                 </li>
                 <li className="mb-[10px] pb-[10px] border-b-[1px] border-secondary">
                   <h3 className="text-[18px] md:text-[24px] text-secondary font-bold uppercase">Шаг 3: </h3>
-                  <p className="text-[14px] md:text-[18px]">После загрузки и проверки чека, вы получите промокод на 15 000₽ на поездку в MAMONT CAMP. </p>
+                  <p className="text-[14px] md:text-[18px]">После загрузки и проверки чека, вы получитепромокод на 15 000₽ на поездку в MAMONT CAMP. </p>
                 </li>
-                <li className="mb-[10px] pb-[10px] border-b-[1px] border-secondary">
+                <li className="mb-[10px] pb-[10px]  border-secondary">
                   <h3 className="text-[18px] md:text-[24px] text-secondary font-bold uppercase">Шаг 4:</h3>
-                  <p className="text-[14px] md:text-[18px]">Скопируйте или сохраните код.</p>
-                </li>
-                <li>
-                  <h3 className="text-[18px] md:text-[24px] text-secondary font-bold uppercase">Шаг 5:</h3>
-                  <p className="text-[14px] md:text-[18px]">Для оформления тура в MAMONT CAMP со скидкой, нажмите кнопку «применить код» и перейдите на сайт mamontcamp.ru</p>
+                  <p className="text-[14px] md:text-[18px]">Нажмите «применить код» и перейдите в WhatsApp для оформления тура в MAMONT CAMP со скидкой.</p>
                 </li>
               </ul>
+              <p className='text-[16px] font-bold mt-[20px]'>
+                Узнать больше о MAMONT CAMP на сайте:
+                <a target='_blank' href='https://mamontcamp.ru' className='text-[21px] block underline text-secondary'>mamontcamp.ru</a>
+              </p>
               <div className="hidden xl:inline-flex items-center mt-[35px] text-left">
                 <img className="mr-[16px]" src="/message.svg" alt="Телефон" />
                 <p className="text-[15px] md:text-[20px] font-bold uppercase">Возникли вопросы?<br/> свяжитесь с нами</p>
@@ -113,7 +114,7 @@ function PromoCode() {
 
             <a 
               className="block mt-[16px] md:mt-[35px] mb-[24px] py-[8px] md:py-[12px] text-[26px] uppercase md:text-[29px] font-bold text-white bg-secondary rounded-[10px] xl:max-w-[324px] xl:mx-auto xl:mt-[88px] hover:bg-primary hover:text-secondary  transition-all" 
-              target='_blank' href={`https://wa.me/79605817070?text=Я%20получил%20приз%20-%20хочу%20тур%20в%20Кэмп%20со%20скидкой.%20Мой%20промокод:%20${promoCode}`}
+              target='_blank' href={`https://wa.me/79164026288?text=Я%20получил%20приз%20-%20хочу%20тур%20в%20Кэмп%20со%20скидкой.%20Мой%20промокод:%20${promoCode}`}
             >применить код</a>
             
             <div className="inline-flex xl:hidden items-center mx-auto text-left">
