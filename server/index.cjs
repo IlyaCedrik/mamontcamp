@@ -9,7 +9,7 @@ var storage = multer.diskStorage(
         destination: './loader',
         filename: async (_, file, cb ) => {
             let promo;
-            const fileStream = fs.createReadStream('/public/promo.txt');
+            const fileStream = fs.createReadStream('./public/promo.txt');
             const rl = readline.createInterface({
                 input: fileStream,
                 crlfDelay: Infinity
@@ -40,7 +40,7 @@ app.use(function(req, res, next) {
 
 app.post("/api/uploadfile", upload.single('promo'), async (req, res, next) => {
     let promo;
-    const fileStream = fs.createReadStream('/public/promo.txt');
+    const fileStream = fs.createReadStream('./public/promo.txt');
     const rl = readline.createInterface({
         input: fileStream,
         crlfDelay: Infinity
@@ -53,9 +53,9 @@ app.post("/api/uploadfile", upload.single('promo'), async (req, res, next) => {
         }
     }
 
-    fs.readFile('/public/promo.txt', 'utf8', function (_, data) {
+    fs.readFile('./public/promo.txt', 'utf8', function (_, data) {
         var result = data.replace(promo, '-' + promo);
-        fs.writeFile('/public/promo.txt', result, 'utf8', function () {});
+        fs.writeFile('./public/promo.txt', result, 'utf8', function () {});
     });
 
     res.setHeader('Content-Type', 'application/json');
