@@ -12,14 +12,17 @@ function MamontCampApp() {
   return (
     <div className="App">
       <main>
-      <HashRouter>
-        <Menu />
-        <PromoBanner />
-        <Benefits />
-        <PromoCode />
-        <Footer />
-        <ModalAge />
-      </HashRouter>
+        <HashRouter>
+          <Menu />
+          <PromoBanner />
+          <Benefits />
+          <PromoCode />
+          <Footer />
+          <ModalAge />
+          <div className="fixed bottom-[3vw] left-[45vw] w-8 md:w-[initial] z-50 animate-bounce">
+            <img src="/promo-banner/arrow_down.svg" alt="" />
+          </div>
+        </HashRouter>
       </main>
     </div>
   )

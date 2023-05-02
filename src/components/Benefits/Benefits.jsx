@@ -1,3 +1,4 @@
+import { Scrollchor } from "react-scrollchor";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Autoplay, Pagination } from 'swiper';
 
@@ -18,15 +19,15 @@ function Benefits() {
 
 
   return (
-    <section id='benefits' className='pt-[55px] md:pt-[81px] xl:relative xl:pt-0 pb-[68px] md:pb-[32px] xl:pb-0 bg-black text-white xl:h-[730px]'>
+    <section id='benefits' className='pt-[55px] md:pt-[81px] relative xl:relative xl:pt-0 pb-[68px] md:pb-[32px] xl:pb-0 bg-black text-white xl:h-[730px]'>
       <div className="container">
-        <h2 className="md:hidden mb-[45px] text-[10vw] leading-[1] font-extrabold uppercase">
+        <h2 className="md:hidden mb-[27px] md:mb-[55px] text-[10vw] leading-[1] font-extrabold uppercase">
           <span className="block text-[#A19165]">приключения</span>
           начинаются
         </h2>
       </div>
 
-      <div className="md:hidden xl:block mb-[37px]">
+      <div className="md:hidden xl:block mb-[27px]">
         <Swiper
           autoplay={{ delay: 1500, pauseOnMouseEnter: false}}
           pagination={pagination}
@@ -43,7 +44,7 @@ function Benefits() {
         </Swiper>
       </div>
 
-      <div className="container xl:absolute xl:top-0
+      <div className="container relative xl:absolute xl:top-0
       xl:bottom-0 xl:left-0 xl:right-0">
         <div className="md:flex xl:block xl:absolute xl:top-0 xl:bottom-0 xl:right-0 xl:z-10 md:items-end md:space-x-[50px] xl:space-x-0 xl:bg-black xl:bg-opacity-50 xl:w-[475px] xl:px-[35px] xl:pt-[50px] xl:pb-[40px]">
           <div className="md:w-8/12 xl:w-full">
@@ -53,7 +54,7 @@ function Benefits() {
             </h2>
             <p className="text-[10px] md:text-[10px] xl:leading-[15px]">Увлекательные путешествия начинается с истории. Более 20 лет назад 12 полярников совершили аварийную посадку в Антарктиде. Ожидая помощь, они всерьез задумались о поиске мамонтов в Сибири, а спустя год в Якутии был обнаружен юкагирский мамонт. Это вдохновило путешественников на создание уникального русского продукта — водки MAMONT. Сегодня напитки бренда производятся на одном из старейших предприятий Сибири и, пожалуй, в чистейшем и экологичном месте России — в сердце Алтая. </p>
             <p className="mt-[20px] text-[10px] md:text-[10px] xl:leading-[15px]">В 2018 году здесь обосновался лагерь MAMONT CAMP — купольный премиум-глэмпинг. Лагерь работает ежегодно с июня по сентябрь в формате экспедиции. В программе — пешие походы, катание на джипах и водометных катерах, русская баня, горячая купель на берегу реки, насыщенная гастрономическая программа и, конечно, эксклюзивная дегустация продуктов бренда MAMONT.</p>
-            <p className="mt-[27px] text-[12px] md:text-[14px] uppercase font-extrabold text-secondary md:mb-[6px] xl:leading-[16px]">Откройте для себя мир горного Алтая, вдохновитесь энергией дикой природы, отправьтесь в путешествие вместе с MAMONT.</p>
+            <p className="mt-[13px] text-[12px] md:text-[14px] uppercase font-extrabold text-secondary md:mb-[6px] xl:leading-[16px]">Откройте для себя мир горного Алтая, вдохновитесь энергией дикой природы, отправьтесь в путешествие вместе с MAMONT.</p>
           </div>
 
 

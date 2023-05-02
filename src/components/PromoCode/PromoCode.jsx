@@ -28,8 +28,8 @@ function PromoCode() {
       }, 10);
 
       try {
-        let res = await axios.post('http://81.200.145.226:3000/api/uploadfile', formData, {
-        // let res = await axios.post('http://localhost:3000/api/uploadfile', formData, {
+        // let res = await axios.post('http://81.200.145.226:3000/api/uploadfile', formData, {
+        let res = await axios.post('http://localhost:3000/api/uploadfile', formData, {
           'content-type': 'multipart/form-data',
         });
 
@@ -46,11 +46,11 @@ function PromoCode() {
     };
 
   return ( 
-    <section id='promo-code' className='py-[40px] md:py-[55px] text-center xl:text-left'>
+    <section id='promo-code' className='py-[20px] md:py-[55px] text-center xl:text-left'>
       <div className='container md:max-w-[460px] xl:max-w-none'>
         <div className="xl:flex xl:items-end xl:justify-center xl:space-x-[74px]">
           <div className="xl:w-[444px]">
-            <h2 className="mb-[24px] xl:mb-[31px] text-[24px] md:text-[46px] uppercase font-bold">Как получить приз?</h2>
+            <h2 className="mb-[12px] xl:mb-[31px] text-[24px] md:text-[46px] uppercase font-bold">Как получить приз?</h2>
             <div>
               <ul>
                 <li className="mb-[10px] pb-[10px] border-b-[1px] border-secondary">
@@ -63,7 +63,7 @@ function PromoCode() {
                 </li>
                 <li className="mb-[10px] pb-[10px] border-b-[1px] border-secondary">
                   <h3 className="text-[18px] md:text-[24px] text-secondary font-bold uppercase">Шаг 3: </h3>
-                  <p className="text-[14px] md:text-[18px]">После загрузки и проверки чека, вы получитепромокод на 15 000₽ на поездку в MAMONT CAMP. </p>
+                  <p className="text-[14px] md:text-[18px]">После загрузки и проверки чека вы получите промокод на 15 000₽ на поездку в MAMONT CAMP. </p>
                 </li>
                 <li className="mb-[10px] pb-[10px]  border-secondary">
                   <h3 className="text-[18px] md:text-[24px] text-secondary font-bold uppercase">Шаг 4:</h3>
@@ -82,7 +82,7 @@ function PromoCode() {
           </div>
           <div className="xl:w-[415px] xl:text-center">
 
-            <div className='mt-[50px] text-center relative h-[24px] bg-[#D9D9D9] rounded-[5px] overflow-hidden'>
+            <div className='mt-[25px] md:mt-[50px] text-center relative h-[24px] bg-[#D9D9D9] rounded-[5px] overflow-hidden'>
               <span style={{width: load + '%'}} className='block absolute left-0 top-0 bottom-0  bg-secondary transition-all'></span>
               <span className='block absolute left-0 right-0 text-[15px]'>{load}%</span>  
             </div> 
@@ -103,14 +103,16 @@ function PromoCode() {
               }}
             />
 
-            <div className="mt-[32px] md:mt-[45px] py-[18px] md:py-[20px] xl:py-[25px] mb-[8px] md:mb-[15px] bg-[#D9D9D9] bg-opacity-30 rounded-[10px]">
+            <div className="mt-[16px] md:mt-[45px] py-[18px] md:py-[20px] xl:py-[25px] mb-[8px] md:mb-[15px] bg-[#D9D9D9] bg-opacity-30 rounded-[10px]">
               <p className="text-[13] md:text-[17px]">Ваш код: <span className="font-semibold"> { promoCode ? promoCode : 'XXXXXXXXXXXXXXXXXXXXX' }</span></p>
             </div>
 
             <p className="text-[12px] md:text-[15px]">
               <span className="mb-[5px] block text-[13px] md:text-[17px] font-semibold">Скопируйте или сохраните ваш уникальный код.</span>
-              Акция действует с ХХ.04.2023 по ХХ.ХХ.2023<br/> при оформлении тура на сайте mamontcamp.ru
+              Акция действует с 01.05.2023 по 01.08.2023<br/> при оформлении тура на сайте mamontcamp.ru
             </p>
+
+            <p className="text-[12px] md:text-[15px] mt-[15px]">Скидка от промокодов не суммируется.</p>
 
             <a 
               className="block mt-[16px] md:mt-[35px] mb-[24px] py-[8px] md:py-[12px] text-[26px] uppercase md:text-[29px] font-bold text-white bg-secondary rounded-[10px] xl:max-w-[324px] xl:mx-auto xl:mt-[88px] hover:bg-primary hover:text-secondary  transition-all" 
