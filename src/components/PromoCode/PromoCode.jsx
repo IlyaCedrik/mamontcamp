@@ -29,7 +29,6 @@ function PromoCode() {
 
       try {
         let res = await axios.post('http://81.200.145.226:3000/api/uploadfile', formData, {
-        // let res = await axios.post('http://localhost:3000/api/uploadfile', formData, {
           'content-type': 'multipart/form-data',
         });
 

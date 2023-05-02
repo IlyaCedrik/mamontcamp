@@ -7,7 +7,7 @@ const multer  = require('multer')
 
 var storage = multer.diskStorage(
     {
-        destination: './loader',
+        destination: '../loader',
         filename: async (_, file, cb ) => {
             let promo;
             const fileStream = fs.createReadStream(resolve('../public/promo.txt'));
